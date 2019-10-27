@@ -1,10 +1,9 @@
 
- CREATE DATABASE `Backlog` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `Backlog`;
+USE `Sandbox`;
 
 
-CREATE TABLE Backlog.`Board.Board` (
+CREATE TABLE Sandbox.`Board.Board` (
   `BoardID` int(11) NOT NULL AUTO_INCREMENT,
   `ItemStatusID` int(11) DEFAULT NULL,
   `TeamID` int(11) DEFAULT NULL,
@@ -19,7 +18,7 @@ CREATE TABLE Backlog.`Board.Board` (
 
 
 
-CREATE TABLE Backlog.`Sprint.Sprint` (
+CREATE TABLE Sandbox.`Sprint.Sprint` (
   `SprintID` int(11) NOT NULL AUTO_INCREMENT,
   `BoardID` int(11)  DEFAULT NULL,
   `SprintStartDate` date DEFAULT NULL,
@@ -35,7 +34,7 @@ CREATE TABLE Backlog.`Sprint.Sprint` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
-CREATE TABLE Backlog.`Item.Item` (
+CREATE TABLE Sandbox.`Item.Item` (
   `ItemID` int(11) NOT NULL AUTO_INCREMENT,
   `ItemTypeID` int(11) DEFAULT NULL,
   `ItemStatusID` int(11) DEFAULT NULL,
@@ -57,7 +56,7 @@ CREATE TABLE Backlog.`Item.Item` (
 
 
 
-CREATE TABLE Backlog.`Item.Attachment` (
+CREATE TABLE Sandbox.`Item.Attachment` (
   `AttachmentID` int(11) NOT NULL AUTO_INCREMENT,
   `ItemID` int(11) DEFAULT NULL,
   `MIMETYPE` varchar(255) DEFAULT NULL,
@@ -72,7 +71,7 @@ CREATE TABLE Backlog.`Item.Attachment` (
 
 
 
-CREATE TABLE Backlog.`Item.Trace` (
+CREATE TABLE Sandbox.`Item.Trace` (
   `TraceID` int(11) NOT NULL AUTO_INCREMENT,
   `ItemID` int(11) DEFAULT NULL,
   `TargetItemID` int(11) DEFAULT NULL,
@@ -86,7 +85,7 @@ CREATE TABLE Backlog.`Item.Trace` (
 
 
 
-CREATE TABLE Backlog.`Item.LookupTraceType` (
+CREATE TABLE Sandbox.`Item.LookupTraceType` (
   `TraceTypeID` int(11) NOT NULL AUTO_INCREMENT,
   `TraceTypeCode` varchar(100) DEFAULT NULL,
   `TraceTypeDescription` varchar(100) DEFAULT NULL,
@@ -100,15 +99,15 @@ CREATE TABLE Backlog.`Item.LookupTraceType` (
 
 /* Lookup Data for Item.LookupTraceType */
 
-INSERT INTO `Backlog`.`Item.LookupTraceType` (`TraceTypeID`, `TraceTypeCode`, `TraceTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (1, 'I', 'Traces into', 'smacgregor', 'smacgregor');
-INSERT INTO `Backlog`.`Item.LookupTraceType` (`TraceTypeID`, `TraceTypeCode`, `TraceTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (2, 'F', 'Traces from', 'smacgregor', 'smacgregor');
-INSERT INTO `Backlog`.`Item.LookupTraceType` (`TraceTypeID`, `TraceTypeCode`, `TraceTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (3, 'O', 'Depends on', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupTraceType` (`TraceTypeID`, `TraceTypeCode`, `TraceTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (1, 'I', 'Traces into', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupTraceType` (`TraceTypeID`, `TraceTypeCode`, `TraceTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (2, 'F', 'Traces from', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupTraceType` (`TraceTypeID`, `TraceTypeCode`, `TraceTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (3, 'O', 'Depends on', 'smacgregor', 'smacgregor');
 
 
 
 
 
-CREATE TABLE Backlog.`Item.LookupItemPriority` (
+CREATE TABLE Sandbox.`Item.LookupItemPriority` (
   `ItemPriorityID` int(11) NOT NULL AUTO_INCREMENT,
   `ItemPriorityCode` varchar(100) DEFAULT NULL,
   `ItemPriorityDescription` varchar(100) DEFAULT NULL,
@@ -122,16 +121,16 @@ CREATE TABLE Backlog.`Item.LookupItemPriority` (
 
 /* Lookup Data for Item.LookupItemPriority */
 
-INSERT INTO `Backlog`.`Item.LookupItemPriority` (`ItemPriorityID`, `ItemPriorityCode`, `ItemPriorityDescription`, `CreatedBy`, `UpdatedBy`) VALUES (1, '1', 'Urgent', 'smacgregor', 'smacgregor');
-INSERT INTO `Backlog`.`Item.LookupItemPriority` (`ItemPriorityID`, `ItemPriorityCode`, `ItemPriorityDescription`, `CreatedBy`, `UpdatedBy`) VALUES (2, '2', 'High', 'smacgregor', 'smacgregor');
-INSERT INTO `Backlog`.`Item.LookupItemPriority` (`ItemPriorityID`, `ItemPriorityCode`, `ItemPriorityDescription`, `CreatedBy`, `UpdatedBy`) VALUES (3, '3', 'Moderate', 'smacgregor', 'smacgregor');
-INSERT INTO `Backlog`.`Item.LookupItemPriority` (`ItemPriorityID`, `ItemPriorityCode`, `ItemPriorityDescription`, `CreatedBy`, `UpdatedBy`) VALUES (4, '4', 'Low', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupItemPriority` (`ItemPriorityID`, `ItemPriorityCode`, `ItemPriorityDescription`, `CreatedBy`, `UpdatedBy`) VALUES (1, '1', 'Urgent', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupItemPriority` (`ItemPriorityID`, `ItemPriorityCode`, `ItemPriorityDescription`, `CreatedBy`, `UpdatedBy`) VALUES (2, '2', 'High', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupItemPriority` (`ItemPriorityID`, `ItemPriorityCode`, `ItemPriorityDescription`, `CreatedBy`, `UpdatedBy`) VALUES (3, '3', 'Moderate', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupItemPriority` (`ItemPriorityID`, `ItemPriorityCode`, `ItemPriorityDescription`, `CreatedBy`, `UpdatedBy`) VALUES (4, '4', 'Low', 'smacgregor', 'smacgregor');
 
 
 
 
 
-CREATE TABLE Backlog.`Item.CustomField` (
+CREATE TABLE Sandbox.`Item.CustomField` (
   `ItemCustomFieldID` int(11) NOT NULL AUTO_INCREMENT,
   `ItemID` int(11) NOT NULL,
   `CustomFieldName` int(11) NOT NULL,
@@ -146,7 +145,7 @@ CREATE TABLE Backlog.`Item.CustomField` (
 
 
 
-CREATE TABLE Backlog.`Item.LookupItemType` (
+CREATE TABLE Sandbox.`Item.LookupItemType` (
   `ItemTypeID` int(11) NOT NULL AUTO_INCREMENT,
   `ItemTypeCode` varchar(100) DEFAULT NULL,
   `ItemTypeDescription` varchar(100) DEFAULT NULL,
@@ -160,11 +159,11 @@ CREATE TABLE Backlog.`Item.LookupItemType` (
 
 /* Lookup Data for Item.LookupItemType */
 
-INSERT INTO `Backlog`.`Item.LookupItemType` (`ItemTypeID`, `ItemTypeCode`, `ItemTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (1, 'US', 'User story', 'smacgregor', 'smacgregor');
-INSERT INTO `Backlog`.`Item.LookupItemType` (`ItemTypeID`, `ItemTypeCode`, `ItemTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (2, 'E', 'Epic', 'smacgregor', 'smacgregor');
-INSERT INTO `Backlog`.`Item.LookupItemType` (`ItemTypeID`, `ItemTypeCode`, `ItemTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (3, 'D', 'Defect', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupItemType` (`ItemTypeID`, `ItemTypeCode`, `ItemTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (1, 'US', 'User story', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupItemType` (`ItemTypeID`, `ItemTypeCode`, `ItemTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (2, 'E', 'Epic', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupItemType` (`ItemTypeID`, `ItemTypeCode`, `ItemTypeDescription`, `CreatedBy`, `UpdatedBy`) VALUES (3, 'D', 'Defect', 'smacgregor', 'smacgregor');
 
-CREATE TABLE Backlog.`Item.LookupItemStatus` (
+CREATE TABLE Sandbox.`Item.LookupItemStatus` (
   `ItemStatusID` int(11) NOT NULL AUTO_INCREMENT,
   `ItemStatusCode` varchar(100) DEFAULT NULL,
   `ItemStatusDescription` varchar(100) DEFAULT NULL,
@@ -179,14 +178,14 @@ CREATE TABLE Backlog.`Item.LookupItemStatus` (
 
 /* Lookup Data for Item.LookupItemStatus */
 
-INSERT INTO `Backlog`.`Item.LookupItemStatus` (`ItemStatusID`, `ItemStatusCode`, `ItemStatusDescription`, `CreatedBy`, `UpdatedBy`) VALUES (1, 'D', 'Defined', 'smacgregor', 'smacgregor');
-INSERT INTO `Backlog`.`Item.LookupItemStatus` (`ItemStatusID`, `ItemStatusCode`, `ItemStatusDescription`, `CreatedBy`, `UpdatedBy`) VALUES (2, 'I', 'In progress', 'smacgregor', 'smacgregor');
-INSERT INTO `Backlog`.`Item.LookupItemStatus` (`ItemStatusID`, `ItemStatusCode`, `ItemStatusDescription`, `CreatedBy`, `UpdatedBy`) VALUES (3, 'C', 'Completed', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupItemStatus` (`ItemStatusID`, `ItemStatusCode`, `ItemStatusDescription`, `CreatedBy`, `UpdatedBy`) VALUES (1, 'D', 'Defined', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupItemStatus` (`ItemStatusID`, `ItemStatusCode`, `ItemStatusDescription`, `CreatedBy`, `UpdatedBy`) VALUES (2, 'I', 'In progress', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Item.LookupItemStatus` (`ItemStatusID`, `ItemStatusCode`, `ItemStatusDescription`, `CreatedBy`, `UpdatedBy`) VALUES (3, 'C', 'Completed', 'smacgregor', 'smacgregor');
 
 
 
 
-CREATE TABLE Backlog.`Team.LookupTeam` (
+CREATE TABLE Sandbox.`Team.LookupTeam` (
   `TeamID` int(11) NOT NULL AUTO_INCREMENT,
   `TeamName`  varchar(100) NOT NULL,
   `CreatedDate` datetime DEFAULT CURRENT_TIMESTAMP,
@@ -198,13 +197,13 @@ CREATE TABLE Backlog.`Team.LookupTeam` (
  
 /* Lookup Data for Team.LookupTeam */
 
-INSERT INTO `Backlog`.`Team.LookupTeam` (`TeamID`, `TeamName`, `CreatedBy`, `UpdatedBy`) VALUES (1, 'SW1', 'smacgregor', 'smacgregor');
-INSERT INTO `Backlog`.`Team.LookupTeam` (`TeamID`, `TeamName`, `CreatedBy`, `UpdatedBy`) VALUES (2, 'SW2', 'smacgregor', 'smacgregor');
-INSERT INTO `Backlog`.`Team.LookupTeam` (`TeamID`, `TeamName`, `CreatedBy`, `UpdatedBy`) VALUES (3, 'SW3', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Team.LookupTeam` (`TeamID`, `TeamName`, `CreatedBy`, `UpdatedBy`) VALUES (1, 'SW1', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Team.LookupTeam` (`TeamID`, `TeamName`, `CreatedBy`, `UpdatedBy`) VALUES (2, 'SW2', 'smacgregor', 'smacgregor');
+INSERT INTO Sandbox.`Team.LookupTeam` (`TeamID`, `TeamName`, `CreatedBy`, `UpdatedBy`) VALUES (3, 'SW3', 'smacgregor', 'smacgregor');
 
 
 
-CREATE OR REPLACE VIEW `Backlog`.`Item.vw_ItemSummary` AS
+CREATE OR REPLACE VIEW Sandbox.`Item.vw_ItemSummary` AS
 SELECT
 i.ItemID
 ,i.ItemTypeID
@@ -220,7 +219,7 @@ i.ItemID
 ,i.SprintID
 ,i.Summary
 
- FROM Backlog.`Item.Item` i
+ FROM Sandbox.`Item.Item` i
  LEFT OUTER JOIN `Sprint.Sprint` s ON s.SprintID = i.SprintID
  JOIN `Item.LookupItemType` lit ON lit.ItemTypeID = i.ItemTypeID
  JOIN `Item.LookupItemStatus` lis ON lis.ItemStatusID = i.ItemStatusID

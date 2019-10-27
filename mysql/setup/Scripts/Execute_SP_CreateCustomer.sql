@@ -1,4 +1,4 @@
-CALL `Customer`.`Role.sp_CreateCustomer`(
+CALL `Sandbox`.`Role.sp_CreateCustomer`(
  'MBP',
  'John', 
  'Henry', 

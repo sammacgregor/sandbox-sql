@@ -1,9 +1,9 @@
 
 -- CREATE DATABASE `AuditLog` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `AuditLog`;
+USE `Sandbox`;
 
-CREATE TABLE AuditLog.`Audit.AuditLog` (
+CREATE TABLE Sandbox.`Audit.AuditLog` (
   `AuditLogID` int(11) NOT NULL AUTO_INCREMENT,
   `ProcessInstanceID` int(11) DEFAULT NULL,
   `Action` varchar(100) DEFAULT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE AuditLog.`Audit.AuditLog` (
   PRIMARY KEY (`AuditLogID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE AuditLog.`Audit.APIEventLog` (
+CREATE TABLE Sandbox.`Audit.APIEventLog` (
   `APIEventLogID` int(11) NOT NULL AUTO_INCREMENT,
   `CorrelationID` varchar(50) DEFAULT NULL,
   `InitiatingApplication` varchar(100) DEFAULT NULL,

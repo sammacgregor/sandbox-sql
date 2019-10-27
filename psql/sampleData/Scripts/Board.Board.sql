@@ -1,0 +1,5 @@
+insert into Board.Board (BoardID, TeamID, BoardName, Description, CreatedDate, CreatedBy, UpdatedDate, UpdatedBy) values (1, 1, 'Aerified', 'firmware', '2019-07-15 19:57:58', 'bsever0', '2018-10-09 23:20:47', 'gdonnachie0');
+insert into Board.Board (BoardID, TeamID, BoardName, Description, CreatedDate, CreatedBy, UpdatedDate, UpdatedBy) values (2, 1, 'Span', 'contingency', '2019-07-26 13:50:23', 'barnholdt1', '2018-09-03 23:30:12', 'esketchley1');
+insert into Board.Board (BoardID, TeamID, BoardName, Description, CreatedDate, CreatedBy, UpdatedDate, UpdatedBy) values (3, 1, 'Domainer', 'algorithm', '2018-12-17 12:10:50', 'emacmenamy2', '2019-02-28 05:57:14', 'osabater2');
+insert into Board.Board (BoardID, TeamID, BoardName, Description, CreatedDate, CreatedBy, UpdatedDate, UpdatedBy) values (4, 1, 'Mat Lam Tam', 'asymmetric', '2019-06-11 02:55:28', 'tkerfod3', '2018-09-26 17:03:37', 'froddick3');
+insert into Board.Board (BoardID, TeamID, BoardName, Description, CreatedDate, CreatedBy, UpdatedDate, UpdatedBy) values (5, 1, 'Zathin', 'migration', '2019-05-07 11:47:28', 'osiely4', '2019-07-09 19:49:21', 'lmatveichev4');

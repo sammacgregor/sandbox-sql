@@ -2,9 +2,9 @@
 
 -- CREATE DATABASE `Request` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `Request`;
+USE `Sandbox`;
 
-CREATE TABLE `Process.ProcessDefinition` (
+CREATE TABLE Sandbox.`Process.ProcessDefinition` (
   `ProcessDefinitionID` int(11) NOT NULL AUTO_INCREMENT,
   `ProcessDefinitionDescription` varchar(100) DEFAULT NULL,
   `CreatedDate` datetime DEFAULT CURRENT_TIMESTAMP,
@@ -15,7 +15,7 @@ CREATE TABLE `Process.ProcessDefinition` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
-CREATE TABLE `Process.Event` (
+CREATE TABLE Sandbox.`Process.Event` (
   `EventID` int(11) NOT NULL AUTO_INCREMENT,
   `EventTypeId` varchar(100) DEFAULT NULL,
   `CreatedDate` datetime DEFAULT CURRENT_TIMESTAMP,
@@ -27,7 +27,7 @@ CREATE TABLE `Process.Event` (
 
 -- LOOKUP TABLES - AppData
 
-CREATE TABLE `Process.LookupMilestone` (
+CREATE TABLE Sandbox.`Process.LookupMilestone` (
   `MilestoneID` int(11) NOT NULL AUTO_INCREMENT,
   `MilestoneDescription` varchar(100) DEFAULT NULL,
   `CreatedDate` datetime DEFAULT CURRENT_TIMESTAMP,
@@ -39,7 +39,7 @@ CREATE TABLE `Process.LookupMilestone` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
-CREATE TABLE `Process.LookupEventType` (
+CREATE TABLE Sandbox.`Process.LookupEventType` (
   `EventTypeID` int(11) NOT NULL AUTO_INCREMENT,
   `EventTypeDescription` varchar(100) DEFAULT NULL,
   `CreatedDate` datetime DEFAULT CURRENT_TIMESTAMP,

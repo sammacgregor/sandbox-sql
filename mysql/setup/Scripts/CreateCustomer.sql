@@ -1,6 +1,6 @@
-USE `Customer`;
+USE `Sandbox`;
 
-CREATE TABLE Customer.`Role.Role` (
+CREATE TABLE Sandbox.`Role.Role` (
   `RoleID` int(11) NOT NULL AUTO_INCREMENT,
   `RoleTypeCode` varchar(100) DEFAULT NULL,
   `CreatedDate` datetime DEFAULT CURRENT_TIMESTAMP,
@@ -11,7 +11,7 @@ CREATE TABLE Customer.`Role.Role` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
-CREATE TABLE Customer.`Role.PhysicalAddressExtension` (
+CREATE TABLE Sandbox.`Role.PhysicalAddressExtension` (
   `PhysicalAddressID` int(11) NOT NULL AUTO_INCREMENT,
   `RoleID` int(11) DEFAULT NULL,
   `AddressType` varchar(3) DEFAULT NULL,  
@@ -30,7 +30,7 @@ CREATE TABLE Customer.`Role.PhysicalAddressExtension` (
   PRIMARY KEY (`PhysicalAddressID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE Customer.`Role.ElectronicAddressExtension` (
+CREATE TABLE Sandbox.`Role.ElectronicAddressExtension` (
   `ElectronicAddressID` int(11) NOT NULL AUTO_INCREMENT,
   `RoleID` int(11) DEFAULT NULL,
   `ElectronicAddressTypeID` int(11) DEFAULT NULL,  
@@ -45,7 +45,7 @@ CREATE TABLE Customer.`Role.ElectronicAddressExtension` (
   PRIMARY KEY (`ElectronicAddressID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE Customer.`Role.LookupElectronicAddressType` (
+CREATE TABLE Sandbox.`Role.LookupElectronicAddressType` (
   `ElectronicAddressTypeID` int(11) NOT NULL AUTO_INCREMENT,
   `MediaTypeCode` varchar(100) DEFAULT NULL,  
   `MediaTypeDescription` varchar(100) DEFAULT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE Customer.`Role.LookupElectronicAddressType` (
   PRIMARY KEY (`ElectronicAddressTypeID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE Customer.`Role.LookupPhysicalAddressType` (
+CREATE TABLE Sandbox.`Role.LookupPhysicalAddressType` (
   `PhysicalAddressTypeID` int(11) NOT NULL AUTO_INCREMENT,
   `PhysicalAddressTypeCode` varchar(100) DEFAULT NULL,  
   `PhysicalAddressTypeDescription` varchar(100) DEFAULT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE Customer.`Role.LookupPhysicalAddressType` (
 
 
 
-CREATE TABLE Customer.`Role.LookupRoleType` (
+CREATE TABLE Sandbox.`Role.LookupRoleType` (
   `RoleTypeID` int(11) NOT NULL AUTO_INCREMENT,
   `RoleTypeCode` varchar(100) DEFAULT NULL,
   `RoleTypeDescription` varchar(100) DEFAULT NULL,
@@ -80,7 +80,7 @@ CREATE TABLE Customer.`Role.LookupRoleType` (
   PRIMARY KEY (`RoleTypeID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE Customer.`Role.PersonExtension` (
+CREATE TABLE Sandbox.`Role.PersonExtension` (
   `PersonExtensionID` int(11) NOT NULL AUTO_INCREMENT,
   `RoleID` int(11) DEFAULT NULL,
   `GivenName` varchar(100) DEFAULT NULL,
@@ -97,7 +97,7 @@ CREATE TABLE Customer.`Role.PersonExtension` (
   PRIMARY KEY (`PersonExtensionID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE Customer.`Role.MemberExtension` (
+CREATE TABLE Sandbox.`Role.MemberExtension` (
   `MemberExtensionID` int(11) NOT NULL AUTO_INCREMENT,
   `RoleID` int(11) DEFAULT NULL,
   `TaxFileNumber` varchar(100) DEFAULT NULL,
@@ -109,7 +109,7 @@ CREATE TABLE Customer.`Role.MemberExtension` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
-CREATE TABLE Customer.`Role.BankAccount` (
+CREATE TABLE Sandbox.`Role.BankAccount` (
   `BankAccountID` int(11) NOT NULL AUTO_INCREMENT,
   `RoleID` int(11) DEFAULT NULL,
   `BSBNumber` int(6) DEFAULT NULL,
@@ -125,7 +125,7 @@ CREATE TABLE Customer.`Role.BankAccount` (
 
 
 
-CREATE TABLE Customer.`Role.Product` (
+CREATE TABLE Sandbox.`Role.Product` (
   `ProductID` int(11) NOT NULL AUTO_INCREMENT,
   `RoleID` int(11) DEFAULT NULL,
   `StatusID` int(11) DEFAULT NULL,
@@ -140,7 +140,7 @@ CREATE TABLE Customer.`Role.Product` (
 
 
 
-CREATE TABLE Customer.`Product.LookupProduct` (
+CREATE TABLE Sandbox.`Product.LookupProduct` (
   `ProductID` int(11) NOT NULL AUTO_INCREMENT,
   `ProductGroupID` int(11) DEFAULT NULL,
   `ProductCode` varchar(11) DEFAULT NULL,
@@ -152,7 +152,7 @@ CREATE TABLE Customer.`Product.LookupProduct` (
   PRIMARY KEY (`ProductID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-CREATE TABLE Customer.`Product.LookupProductStatus` (
+CREATE TABLE Sandbox.`Product.LookupProductStatus` (
   `ProductStatusID` int(11) NOT NULL AUTO_INCREMENT,
   `ProductStatusCode` varchar(11) DEFAULT NULL,
   `ProductStatusDescription` int(50) DEFAULT NULL,
@@ -164,7 +164,7 @@ CREATE TABLE Customer.`Product.LookupProductStatus` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
-CREATE TABLE Customer.`Product.LookupProductGroup` (
+CREATE TABLE Sandbox.`Product.LookupProductGroup` (
   `ProductGroupID` int(11) NOT NULL AUTO_INCREMENT,
   `ProductGroupCode` varchar(11) DEFAULT NULL,
   `ProductGroupDescription` int(50) DEFAULT NULL,

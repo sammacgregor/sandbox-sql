@@ -2,7 +2,7 @@
 -- CREATE DATABASE `System` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
 
-USE `System`;
+USE `Sandbox`;
 
 CREATE TABLE `User.User` (
   `UserID` int(11) NOT NULL AUTO_INCREMENT,
