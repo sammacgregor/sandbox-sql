@@ -1,1 +1,0 @@
-mysql -u root -e "DROP DATABASE Sandbox"

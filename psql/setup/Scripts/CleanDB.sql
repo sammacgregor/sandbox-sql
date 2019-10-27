@@ -1,0 +1,1 @@
+DROP SCHEMA IF EXISTS Sprint, Item, Audit, Board, System, Team CASCADE
