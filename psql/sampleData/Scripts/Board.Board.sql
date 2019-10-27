@@ -3,3 +3,4 @@ insert into Board.Board (Board_ID, Team_ID, Board_Name, Description, Created_Dat
 insert into Board.Board (Board_ID, Team_ID, Board_Name, Description, Created_Date, Created_By, Updated_Date, Updated_By) values (3, 1, 'Rank', 'asynchronous', '2019-06-05 01:21:54', 'ckynsey2', '2018-12-17 09:26:00', 'aegerton2');
 insert into Board.Board (Board_ID, Team_ID, Board_Name, Description, Created_Date, Created_By, Updated_Date, Updated_By) values (4, 1, 'Biodex', 'project', '2019-06-15 03:43:14', 'cmacdonald3', '2019-03-25 12:23:03', 'jphelan3');
 insert into Board.Board (Board_ID, Team_ID, Board_Name, Description, Created_Date, Created_By, Updated_Date, Updated_By) values (5, 1, 'Tres-Zap', '24/7', '2018-08-15 04:24:30', 'pantham4', '2019-01-08 15:48:25', 'cpecht4');
+ALTER SEQUENCE board.board_board_id_seq RESTART WITH 6;
