@@ -19,6 +19,7 @@ CREATE TABLE Board.Board (
 CREATE TABLE Sprint.Sprint (
   Sprint_ID serial PRIMARY KEY,
   Board_ID int  DEFAULT NULL,
+  Sprint_Goal varchar(255) DEFAULT NULL,
   Sprint_Start_Date date DEFAULT NULL,
   Sprint_End_Date date DEFAULT NULL,
   Sprint_Active int NULL,
