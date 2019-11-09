@@ -1,7 +1,8 @@
 CREATE SCHEMA System;
+CREATE EXTENSION "uuid-ossp" WITH SCHEMA system;
 
 CREATE TABLE System.User (
-  User_ID serial PRIMARY KEY,
+  User_ID uuid DEFAULT system.uuid_generate_v4() PRIMARY KEY,
   Password varchar(256) DEFAULT NULL,
   Given_Name varchar(100) DEFAULT NULL,
   Surname varchar(100) DEFAULT NULL,

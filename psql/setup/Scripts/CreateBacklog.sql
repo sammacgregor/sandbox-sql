@@ -3,6 +3,7 @@ CREATE SCHEMA Board;
 CREATE SCHEMA Sprint;
 CREATE SCHEMA Team;
 
+
 CREATE TABLE Board.Board (
   Board_ID serial PRIMARY KEY,
   Team_ID int DEFAULT NULL,
