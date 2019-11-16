@@ -1,4 +1,4 @@
-cd .\Setup\
+Set-Location .\Setup\
 Write-Output "Starting heroku data clean"
 invoke-expression -Command .\clean.ps1
 
@@ -7,8 +7,8 @@ invoke-expression -Command .\setup.ps1
 
 
 Write-Output "Starting heroku data load"
-cd ..
-cd .\sampleData\
+Set-Location ..
+Set-Location .\sampleData\
 invoke-expression -Command .\load.ps1
-cd ..
+Set-Location ..
 Write-Output "Finished"
