@@ -13,3 +13,16 @@ CREATE TABLE System.User (
   Updated_Date timestamp DEFAULT CURRENT_TIMESTAMP,
   Updated_By varchar(45) DEFAULT NULL
 );
+
+
+CREATE TABLE System.Audit (
+  Audit_ID serial PRIMARY KEY,
+  Who varchar(100) DEFAULT NULL,
+  What varchar(100) DEFAULT NULL,
+  EventDateTime timestamp DEFAULT NULL,
+  Payload varchar(1000) DEFAULT NULL,
+  Created_Date timestamp DEFAULT CURRENT_TIMESTAMP,
+  Created_By varchar(45) DEFAULT NULL,
+  Updated_Date timestamp DEFAULT CURRENT_TIMESTAMP,
+  Updated_By varchar(45) DEFAULT NULL
+);
